@@ -70,7 +70,7 @@ if(error) return <p>Error:{error}</p>
                         {orderDetails.orderItems.map((item)=>(
                             <tr key={item.productId} className='border-b'>
                                 <td className='py-2 px-4 flex items-center'>
-                                    <img src={`http://localhost:9000${item.image}`} alt={item.name} className='w-12 h-12 object-cover 
+                                    <img src={`${import.meta.env.VITE_BACKEND_URL}${item.image}`} alt={item.name} className='w-12 h-12 object-cover 
                                     rounded-lg mr-4 ' />
                                     <Link to={`product/${item.productId}`}
                                      className='text-blue-500 hover:underline'>

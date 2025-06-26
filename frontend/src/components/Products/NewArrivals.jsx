@@ -83,7 +83,7 @@ const NewArrivals = () => {
             
         <div key={product._id} className='min-w-[100%] sm:min-w-[50%] lg:min-w-[30%] relative'>
                 <img className='w-full h-[500px] object-cover rounded-lg'
-                src={`http://localhost:9000${product.images[0]?.url}`} alt={product.images[0]?.altText || product.name}/>
+                src={`${import.meta.env.VITE_BACKEND_URL}${product.images[0]?.url}`} alt={product.images[0]?.altText || product.name}/>
                 <div className='absolute bottom-0 left-0 right-0 bg-opacity-50 backdrop-blur-md
                 text-white p-4 rounded-bg-lg'>
                     <Link to={`/product/${product._id}`} className="block">

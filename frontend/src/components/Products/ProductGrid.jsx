@@ -19,7 +19,7 @@ const ProductGrid = ({products,loading,error}) => {
             <Link key={index} to={`/product/${product._id}`} className='block'>
                 <div className='bg-white p-4 rounded-lg'>
                     <div className='w-full h-96 mb-4'>
-                        <img src={`http://localhost:9000${product.images[0].url}`} alt={product.name} 
+                        <img src={`${import.meta.env.VITE_BACKEND_URL}${product.images[0].url}`} alt={product.name} 
                         className='w-full h-full object-cover rounded-lg'/>
                     </div>
                     <h3 className='text-sm mb-2'>{product.name}</h3>

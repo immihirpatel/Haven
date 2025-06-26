@@ -91,7 +91,7 @@ const ProductDetails = ({productId}) => {
             {selectedProduct.images.map((image, index) => (
               <img
                 key={index}
-                src={image.url.startsWith("http") ? image.url : `http://localhost:9000${image.url}`}
+                src={image.url.startsWith("http") ? image.url : `${import.meta.env.VITE_BACKEND_URL}${image.url}`}
                 alt={image.altText || `Thumbnail ${index}`}
                 className={`w-20 h-20 object-cover rounded-lg cursor-pointer border
                         ${
@@ -107,7 +107,7 @@ const ProductDetails = ({productId}) => {
           <div className="md:w-1/2">
             <div className="mb-4">
               <img
-                src={`http://localhost:9000${mainImage}`}
+                src={`${import.meta.env.VITE_BACKEND_URL}${mainImage}`}
                 alt="Main Product"
                 className="w-full h-auto object-cover rounded-lg"
               />
@@ -118,7 +118,7 @@ const ProductDetails = ({productId}) => {
             {selectedProduct.images.map((image, index) => (
               <img
                 key={index}
-                src={`http://localhost:9000${image.url}`}
+                src={`${import.meta.env.VITE_BACKEND_URL}${image.url}`}
                 alt={image.altText || `Thumbnail ${index}`}
                 className={`w-20 h-20 object-cover rounded-lg cursor-pointer border
                         ${

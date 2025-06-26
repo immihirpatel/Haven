@@ -183,7 +183,7 @@ const EditProductPage = () => {
             {productData.images.map((image,index)=>(
               <div key={index}>
                 <img 
-                src={image.url.startsWith("http") ? image.url : `http://localhost:9000${image.url}`} 
+                src={image.url.startsWith("http") ? image.url : `${import.meta.env.VITE_BACKEND_URL}${image.url}`} 
                 alt="Product Image" 
                 className='w-20 h-20 object-cover rounded-md shadow-md'
                 />

@@ -31,7 +31,7 @@ const CartContents = ({cart,userId,guestId}) => {
         {cart.products.map((product,index)=>(
             <div key={index} className='flex items-start justify-between py-4 border-b'>
                 <div className='flex items-start'>
-                    <img src={`http://localhost:9000${product.image}`} alt={product.name} className='w-20 h-24 object-cover mr-4 rounded'/>
+                    <img src={`${import.meta.env.VITE_BACKEND_URL}${product.image}`} alt={product.name} className='w-20 h-24 object-cover mr-4 rounded'/>
                     <div>
                     <h3>{product.name}</h3>
                     <p className='text-sm text-gray-500'>
