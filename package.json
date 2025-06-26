@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.8.3",
+    "sonner": "^2.0.3"
+  }
+}
